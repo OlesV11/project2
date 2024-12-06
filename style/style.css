@@ -16,12 +16,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin-top: 0;
   margin-bottom: 0;
 }
 img {
-  display: flex;
+  display: block;
 }
 button {
   cursor: pointer;
@@ -229,6 +230,7 @@ button {
   border-radius: 15px;
   border: 1px solid #fd9222;
   padding: 32px 28px;
+  color: #ffffff;
 }
 .ingredients-item:nth-child(4n + 1) {
   color: #ffffff;
@@ -254,9 +256,132 @@ button {
   color: #111;
 }
 /* #endregion */
+/*  */
+/* #region HOW */
+.how {
+  padding-bottom: 100px;
+}
+.how-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111;
+  padding-bottom: 50px;
+}
+.how-made-content-wrapper {
+  display: flex;
+  gap: 20px;
+}
+.how-made-text-wrapper {
+  padding: 32px;
+}
+.how-made-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  color: #111;
+  padding-bottom: 28px;
+  width: 350px;
+}
+.how-made-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.how-made-list-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: #111;
+}
+/* #endregion */
+/*  */
+/* #region Reviews */
+.reviews {
+  margin-bottom: 100px;
+}
+
+.reviews-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111;
+  margin-bottom: 50px;
+}
+.reviews-list {
+  display: flex;
+  gap: 28px;
+}
+
+.reviews-item {
+  padding: 24px;
+  background-color: #fff;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  width: 360px;
+}
+.reviews-item img {
+  margin: 0 auto 18px;
+}
+.reviews-item-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  text-align: center;
+  color: #111;
+  margin-bottom: 24px;
+}
+.reviews-item-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(17, 17, 17, 0.7);
+}
+.reviews-btn {
+  border: 1px solid #fd9222;
+  border-radius: 100px;
+  padding: 14px 40px;
+  width: 222px;
+  height: 50px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  display: block;
+}
+.reviews-btn:hover {
+  color: #fff;
+  background: #fd9222;
+}
+/*#endregion  */
 /* #region Footer */
 .footer {
   background-color: #1e1823;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #ffffff;
+}
+.page-footer-top-block {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.page-footer-bottom-block {
+  padding-top: 24px;
+}
+.page-navigation {
+  display: flex;
+  column-gap: 24px;
 }
 .footer-title {
   font-weight: 500;
@@ -264,6 +389,7 @@ button {
   line-height: 1.21;
   letter-spacing: -0.02em;
   color: #fff;
+  max-width: 300px;
 }
 .footer-addr {
   font-style: normal;
@@ -272,17 +398,20 @@ button {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.28;
-  text-align: center;
   color: #ffffff;
+  margin-bottom: 14px;
 }
 .addr-list {
+}
+.addr-item:not(:last-child) {
+  margin-bottom: 4px;
 }
 .addr-item {
 }
 .addr-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.28571;
+  line-height: 1.28;
   text-align: center;
   color: #ffffff;
 }
@@ -294,5 +423,13 @@ button {
 }
 
 .nav-item-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  color: #fff;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 /* #endregion */
