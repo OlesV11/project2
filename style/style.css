@@ -37,7 +37,6 @@ button {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -144,6 +143,14 @@ button {
   padding-left: 72px;
   padding-right: 72px;
   border-radius: 30px;
+  background-image: linear-gradient(
+      rgba(30, 24, 35, 0.4),
+      rgba(30, 24, 35, 0.4)
+    ),
+    url(../icon/chocolate/chocolate-covered.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
 }
 .hero-title {
   width: 484px;
@@ -205,6 +212,18 @@ button {
 /* #endregion */
 /*  */
 /* #region Benefits */
+.benefits-container-icon {
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 365px;
+  width: 62px;
+  height: 62px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+.benefits-icon {
+}
 .benefits {
   background-color: #1e1823;
   padding-top: 50px;
@@ -220,6 +239,20 @@ button {
 .benefits-list-item {
   width: 308px;
 }
+.benefits-list-item.current {
+  position: relative;
+}
+.benefits-list-item.current:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 1px;
+  height: 50%;
+  transform: translateY(-50%);
+  top: 50%;
+  right: -18px;
+}
+
 .benefits-list-title {
   font-weight: 600;
   font-size: 18px;
@@ -268,23 +301,58 @@ button {
   gap: 19px;
 }
 .overlay-title {
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #111;
+  /* padding-left: 20px; */
+  padding-bottom: 20px;
+}
+.overlay-block-one {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #fff;
+  border-radius: 35px;
+  padding: 6px 16px;
+  width: 81px;
+  height: 24px;
+  background-color: #fd9222;
+}
+.overlay-block-two {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 10px;
   line-height: 1.2;
   color: #111;
-  margin: 20px 20px 87px;
-  padding-bottom: 8px;
-}
-.overlay-block-one {
-}
-.overlay-block-two {
+  border: 1px solid #fd9222;
+  border-radius: 35px;
+  padding: 6px 16px;
+  width: 93px;
+  height: 24px;
+  background-color: #fafafa;
 }
 .overlay-main-text {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  width: 230px;
+}
+.overlay-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 18px;
+  gap: 6px;
 }
 .overlay {
   display: block;
   color: #111;
+  width: 270px;
   padding: 14px 20px 20px 20px;
   background-color: #ffffff;
   transform: translateY(100%);
